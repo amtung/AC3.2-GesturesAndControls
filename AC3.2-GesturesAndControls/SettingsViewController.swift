@@ -11,6 +11,23 @@ import UIKit
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var colorSlider: UISlider!
+    @IBOutlet weak var greenColorSlider: UISlider!
+    @IBOutlet weak var blueColorSlider: UISlider!
+    @IBOutlet weak var colorPreview: UIView!
+    @IBAction func resetSwitch(_ sender: UISwitch) {
+        if sender.isOn {
+            
+        }
+        else {
+            
+        }
+    }
+    
+    @IBAction func colorSegment(_ sender: UISegmentedControl) {
+    }
+    @IBAction func colorStepper(_ sender: AnyObject) {
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
