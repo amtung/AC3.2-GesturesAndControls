@@ -10,6 +10,8 @@ import UIKit
 
 class GesturesViewController: UIViewController {
     var correctColorValue = 0.0
+    var correctColorValueTwo = 0.0
+    var correctColorValueThree = 0.0
     
     enum ActionGesture: Int {
         case tap, doubleTap, twoFingerTap, leftSwipe, rightSwipe
@@ -137,7 +139,7 @@ class GesturesViewController: UIViewController {
         
         if correct {
             // use the "correctColorValue" to manipulate the red component of a color
-            self.view.backgroundColor = UIColor(red: CGFloat(self.correctColorValue), green: 1.0, blue: 1.0, alpha: 1.0)
+            self.view.backgroundColor = UIColor(red: CGFloat(self.correctColorValue), green: CGFloat(self.correctColorValueTwo), blue: CGFloat(self.correctColorValueThree), alpha: 1.0)
             
             // alternatively we can change the hue using this initializer of UIColor
 //             self.view.backgroundColor = UIColor(hue: CGFloat(Float(self.correctColorValue)), saturation: 1.0, brightness: 1.0, alpha: 1.0)

@@ -13,8 +13,12 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var colorSlider: UISlider!
     @IBOutlet weak var greenColorSlider: UISlider!
     @IBOutlet weak var blueColorSlider: UISlider!
-    @IBOutlet weak var colorPreview: UIView!
-    @IBAction func resetSwitch(_ sender: UISwitch) {
+
+    @IBAction func colorSegment(_ sender: UISegmentedControl) {
+    }
+    @IBAction func colorStepper(_ sender: AnyObject) {
+    }
+    @IBAction func colorSwitch(_ sender: UISwitch) {
         if sender.isOn {
             
         }
@@ -22,22 +26,12 @@ class SettingsViewController: UIViewController {
             
         }
     }
-    
-    @IBAction func colorSegment(_ sender: UISegmentedControl) {
-    }
-    @IBAction func colorStepper(_ sender: AnyObject) {
-    }
-
+    @IBOutlet weak var colorPreview: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 
@@ -47,6 +41,8 @@ class SettingsViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let gvc = segue.destination as? GesturesViewController {
             gvc.correctColorValue = Double(colorSlider.value)
+            gvc.correctColorValueTwo = Double(greenColorSlider.value)
+            gvc.correctColorValueThree = Double(blueColorSlider.value)
         }
     }
 }

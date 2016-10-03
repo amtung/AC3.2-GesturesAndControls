@@ -62,6 +62,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qIc-B1-BZX">
                                 <frame key="frameInset" minX="166" minY="405" width="51" height="31"/>
                                 <connections>
+                                    <action selector="colorSwitch:" destination="J2o-vC-hGA" eventType="valueChanged" id="pto-aA-iOO"/>
                                     <action selector="resetSwitch:" destination="J2o-vC-hGA" eventType="valueChanged" id="b8a-Az-E54"/>
                                 </connections>
                             </switch>
@@ -105,7 +106,7 @@
                     </view>
                     <connections>
                         <outlet property="blueColorSlider" destination="Le8-YW-ey5" id="v2d-Ok-TiP"/>
-                        <outlet property="colorPreview" destination="Xql-Zv-Nkq" id="mT9-TF-eFe"/>
+                        <outlet property="colorPreview" destination="Xql-Zv-Nkq" id="a4J-cy-mV9"/>
                         <outlet property="colorSlider" destination="bRS-eF-hra" id="YJV-a1-guJ"/>
                         <outlet property="greenColorSlider" destination="XlX-8L-bpQ" id="gR9-1f-U0g"/>
                         <outlet property="resetSwitch" destination="qIc-B1-BZX" id="4UG-qT-8kT"/>
